@@ -1,35 +1,12 @@
 <ion-view view-title="Tarefas">
-
     <ion-content>
-
-
-  <ion-checkbox ng-model="filter.red">Tarefa 1</ion-checkbox>
-  <ion-checkbox ng-model="filter.yellow">Tarefa 2</ion-checkbox>
-  <ion-checkbox ng-model="filter.pink">Tarefa 3</ion-checkbox>
-
-
-<!--
-            <ul class="list"> 
-
-                <li class="item">
-          
-                </li>
-
-                  <li class="item">
-                    Tarefa 2
-                </li>
-
-                  <li class="item">
-                    Tarefa 3
-                </li>
-
-                  <li class="item">
-                    Tarefa 4
-                </li>
-
-            </ul>
--->
-
-
+        <ul class="list">
+            <li class="item" ng-repeat="tarefa in tarefas">
+                {{tarefa.nome}}
+            </li>
+            
+        </ul>
     </ion-content>
 </ion-view>
+
+ 

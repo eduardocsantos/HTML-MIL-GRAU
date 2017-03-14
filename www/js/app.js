@@ -29,61 +29,25 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
         }
       }
     })
-
-
-
-
-  $stateProvider
-    .state('tarefas', {
-      url: '/tarefas',
-      views: {
-        'view-inicial': {
-          templateUrl: 'templates/tarefas.html'
-        }
-      }
-    })
-
-
     .state('cadastro', {
       url: '/cadastro',
       views: {
         'view-inicial': {
           templateUrl: 'templates/cadastro.html',
-        controller: 'LoginCtrl'
-
+          controller: 'LoginCtrl'
         }
       }
-    });
-
-
-
-
-
-
-/*
-  $stateProvider
+    })
     .state('tarefas', {
       url: '/tarefas',
       views: {
         'view-inicial': {
           templateUrl: 'templates/tarefas.html',
-          controller: 'DashCtrl'
+          controller: 'TarefasCtrl'
         }
       }
     })
 
-
-    .state('cadastro', {
-      url: '/cadastro',
-      views: {
-        'view-inicial': {
-          templateUrl: 'templates/cadastro.html',
-          controller: 'DashCtrl'
-        }
-      }
-    });
-
-*/
   
   $urlRouterProvider.otherwise('/login');
 
