@@ -11,5 +11,11 @@ $scope.fazerLogin = function(email, senha) {
   alert(email + senha);
 }
 
+
+$scope.novoCadastro = function(email, senha) {
+  alert(email + '-------' + senha);
+}
+
+
 })
 
