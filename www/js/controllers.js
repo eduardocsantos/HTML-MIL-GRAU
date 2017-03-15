@@ -1,6 +1,6 @@
 angular.module('starter.controllers', [])
 
-.controller('LoginCtrl', function($scope) {
+.controller('LoginCtrl', function($scope, login) {
   $scope.email = '';
   $scope.senha = '';
 
@@ -9,7 +9,11 @@ angular.module('starter.controllers', [])
   }
 
   $scope.novoCadastro = function(email, senha) {
-    alert(email + ' - ' + senha);
+
+    Login.novo(email, senha, function(error) {
+      alert(error)
+    });
+
   }
 })
 
