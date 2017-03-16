@@ -21,16 +21,22 @@ angular.module('starter.controllers', [])
   }
 })
 
-.controller('TarefasCtrl', function($scope) {
-  $scope.tarefas = [
-    {
-      nome: 'Estudar: Wordpress'
-    },
-    {
-      nome: 'Estudar: Java'
-    },
-    {
-      nome: 'Estudar: PHP'
-    }
-  ];
+.controller('TarefasCtrl', function($scope, Tarefas ) {
+  $scope.tarefas = [];
+
+Tarefas.get(function(valores) {
+  $scope.tarefas = converteObjParaArray(valores);
+  $scope.apply();
+});
+
 })
+
+function converteObjParaArray(obj) {
+  var array = [];
+
+  for (var key in obj) {
+    obj[key].id = key;
+    array.push([obj][key]);
+  }
+  return array;
+};

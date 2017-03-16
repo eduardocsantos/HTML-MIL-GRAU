@@ -42,3 +42,13 @@ angular.module('starter.services', [])
     }
   };
 })
+
+.factory('Tarefas', function(Context){
+  return{
+    get: function(callback){
+      firebase.database().ref('tarefas').on('value', function(snapshot) {
+        callback(snapshot.val());
+      })
+    }
+  }
+})
